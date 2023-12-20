@@ -1,6 +1,6 @@
-install: 
+install:
 	poetry install
-brain-games: 
+brain-games:
 	poetry run brain-games
 build:
 	poetry build
