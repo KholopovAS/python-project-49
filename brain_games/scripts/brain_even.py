@@ -1,5 +1,7 @@
 import random
+import sys
+sys.path.append('../brain_games')
 
-from brain_games.cli import welcome_user
+from cli.py import welcome_user
 
 welcome_user()
