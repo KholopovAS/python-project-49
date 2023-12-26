@@ -5,7 +5,7 @@ from brain_games.cli import welcome_user
 def game1(name):
 
     i = 0 # счетчик правильных ответов
-    print('Answer "yes" if the number is even, otherwise answer "no"')
+    print('Answer "yes" if the number is even, otherwise answer "no".')
     while i < 3:
         n = random.randint(0, 100)
         print(f'{"Question:"} {n}')
