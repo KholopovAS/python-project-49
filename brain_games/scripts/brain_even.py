@@ -20,7 +20,7 @@ def main():
             print("'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, " + name)
             break
     else:
-        print(f'Congratulations, {name}')
+        print(f'Congratulations, {name}!')
 
 
 print("brain-even\n")
