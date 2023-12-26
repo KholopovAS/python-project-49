@@ -36,11 +36,13 @@ Your answer: ''')
                 print(f'Congratulations, {name}!')
                 break
         elif is_prime(num) and user_answer.lower() == 'no':
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was 'yes'.")
+            print(f"'{user_answer}' is wrong answer ;(. "
+                  f"Correct answer was 'yes'.")
             print(f"Let's try again, {name}!")
             break
         elif not is_prime(num) and user_answer.lower() == 'yes':
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was 'no'.")
+            print(f"'{user_answer}' is wrong answer ;(. "
+                  f"Correct answer was 'no'.")
             print(f"Let's try again, {name}!")
             break
 

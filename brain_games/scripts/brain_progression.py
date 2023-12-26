@@ -7,14 +7,21 @@ name = welcome_user()
 
 
 def generate_progression():
-    length = random.randrange(5, 16)  # Генерируем длину от 5 до 15
-    hidden_index = random.randrange(length)  # Выбираем случайную позицию для скрытого числа
-    start = random.randrange(1, 100)  # Генерируем начальное значение
-    diff = random.randrange(1, 10)  # Генерируем общую разницу
-    progression = [start + i * diff for i in range(length)]  # Генерируем прогрессию
-    progression[hidden_index] = ".."  # Заменяем скрытое число на две точки
-    return progression, progression[
-                            hidden_index] == "..", start + diff * hidden_index  # Возвращаем прогрессию и скрытое число
+    # Генерируем длину от 5 до 15
+    length = random.randrange(5, 16)
+    # Выбираем случайную позицию для скрытого числа
+    hidden_index = random.randrange(length)
+    # Генерируем начальное значение
+    start = random.randrange(1, 100)
+    # Генерируем общую разницу
+    diff = random.randrange(1, 10)
+    # Генерируем прогрессию
+    progression = [start + i * diff for i in range(length)]
+    # Заменяем скрытое число на две точки
+    progression[hidden_index] = ".."
+    # Возвращаем прогрессию и скрытое число
+    return (progression, progression[hidden_index]
+            == "..", start + diff * hidden_index)
 
 
 def main():
@@ -32,11 +39,11 @@ def main():
                 print(f'Congratulations, {name}!')
                 break
         else:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'")
+            print(f"'{user_answer}' is wrong answer ;(. "
+                  f"Correct answer was '{correct_answer}'")
             print(f"Let's try again, {name}!")
             break
 
 
 if __name__ == "__main__":
     main()
-
