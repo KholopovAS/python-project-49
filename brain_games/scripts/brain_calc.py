@@ -17,7 +17,9 @@ def generate_random_expression():
         result = num1 * num2
     return print(f"Question: {num1} {operation} {num2}"), result
 
+
 name = welcome_user()
+
 
 def main():
     score = 0  # Инициализация счетчика
@@ -35,7 +37,8 @@ def main():
         else:
             print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
             print(f"Let's try again, {name}!")
-	    break
+            break
+
 
 if __name__ == "__main__":
     main()
