@@ -19,15 +19,18 @@ def generate_random_expression():
 
 
 def main(name=welcome_user()):
+    score = 0  # Инициализация счетчика
     print("What is the result of the expression?")
     while True:
-        expression, correct_answer = generate_random_expression()  # присваивание значения работы функции 2м переменным.        print(f"Question: {expression}")
+        expression, correct_answer = generate_random_expression()
         user_answer = int(input("Your answer: "))
 
         if user_answer == correct_answer:
             print(f'Correct!')
-            print(f'Congratulations, {name}!')
-            break
+            score += 1  # Увеличение счетчика
+            if score >= 3:  # Проверка, достигли ли мы трех правильных ответов
+                print(f'Congratulations, {name}!')
+                break
         else:
             print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
             print(f"Let's try again, {name}!")
