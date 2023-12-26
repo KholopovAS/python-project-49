@@ -25,6 +25,7 @@ def main(name=welcome_user()):
         user_answer = int(input("Your answer: "))
 
         if user_answer == correct_answer:
+            print(f'Correct!')
             print(f'Congratulations, {name}!')
             break
         else:
