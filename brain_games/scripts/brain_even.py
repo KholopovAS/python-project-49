@@ -3,7 +3,7 @@ import random
 from brain_games.cli import welcome_user
 
 
-def main(name):
+def main():
     i = 0  # счетчик правильных ответов
     print('Answer "yes" if the number is even, otherwise answer "no".')
     while i < 3:
@@ -24,8 +24,8 @@ def main(name):
 
 
 print("brain-even\n")
+
 name = welcome_user()
-main(name)
 
 if __name__ == "__main__":
     main()
