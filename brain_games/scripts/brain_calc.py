@@ -17,8 +17,9 @@ def generate_random_expression():
         result = num1 * num2
     return print(f"Question: {num1} {operation} {num2}"), result
 
+name = welcome_user()
 
-def main(name=welcome_user()):
+def main():
     score = 0  # Инициализация счетчика
     print("What is the result of the expression?")
     while True:
