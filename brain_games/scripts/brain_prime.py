@@ -4,7 +4,7 @@ from brain_games.cli import welcome_user
 
 print("brain-prime\n")
 name = welcome_user()
-print(f'"Answer "yes" if given number is prime. Otherwise answer "no"')
+print('Answer "yes" if the number is even, otherwise answer "no"')
 
 
 def is_prime(n):
