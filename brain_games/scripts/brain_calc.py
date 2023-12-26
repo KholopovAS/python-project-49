@@ -29,13 +29,14 @@ def main():
         user_answer = int(input("Your answer: "))
 
         if user_answer == correct_answer:
-            print(f'Correct!')
+            print('Correct!')
             score += 1  # Увеличение счетчика
             if score >= 3:  # Проверка, достигли ли мы трех правильных ответов
                 print(f'Congratulations, {name}!')
                 break
         else:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(f"'{user_answer}' is wrong answer ;(. "
+                  f"Correct answer was '{correct_answer}'.")
             print(f"Let's try again, {name}!")
             break
 
