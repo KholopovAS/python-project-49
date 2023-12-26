@@ -34,7 +34,7 @@ def main(name=welcome_user()):
         else:
             print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
             print(f"Let's try again, {name}!")
-
+	    break
 
 if __name__ == "__main__":
     main()
