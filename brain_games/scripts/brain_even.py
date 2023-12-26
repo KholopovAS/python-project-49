@@ -17,7 +17,7 @@ def main():
             print("Correct!")
             i += 1
         else:
-            print("'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, " + name)
+            print("'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, " + name + "!")
             break
     else:
         print(f'Congratulations, {name}!')
