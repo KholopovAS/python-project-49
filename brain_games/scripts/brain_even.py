@@ -2,18 +2,18 @@ import random
 
 from brain_games.cli import welcome_user
 
-def game1(name):
 
-    i = 0 # счетчик правильных ответов
+def main(name):
+    i = 0  # счетчик правильных ответов
     print('Answer "yes" if the number is even, otherwise answer "no".')
     while i < 3:
         n = random.randint(0, 100)
         print(f'{"Question:"} {n}')
-        user_answer = input("Your answer: ") # ответ пользователя
-        if user_answer.lower() == "yes" and n%2 == 0:
+        user_answer = input("Your answer: ")  # ответ пользователя
+        if user_answer.lower() == "yes" and n % 2 == 0:
             print("Correct!")
             i += 1
-        elif user_answer.lower() == "no" and n%2 != 0:
+        elif user_answer.lower() == "no" and n % 2 != 0:
             print("Correct!")
             i += 1
         else:
@@ -22,8 +22,10 @@ def game1(name):
     else:
         print(f'Congratulations, {name}')
 
+
+print("brain-even\n")
 name = welcome_user()
-game1(name)
+main(name)
 
 if __name__ == "__main__":
     main()
