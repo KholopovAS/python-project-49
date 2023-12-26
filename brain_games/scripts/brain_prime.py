@@ -4,7 +4,6 @@ from brain_games.cli import welcome_user
 
 print("brain-prime\n")
 name = welcome_user()
-print('Answer "yes" if the number is even, otherwise answer "no"')
 
 
 def is_prime(n):
@@ -23,21 +22,27 @@ def is_prime(n):
 
 
 def main():
-    correct_answers = 0
-    for _ in range(3):
-        num = random.randint(1, 100)
-        user_answer = input(f'''Question: {num} 
-Your answer:''')
+    score = 0  # Инициализация счетчика
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
+    while True:
+        num = random.randint(1, 2)
+        user_answer = input(f'''Question: {num}
+Your answer: ''')
         if (is_prime(num) and user_answer.lower() == 'yes') or \
                 (not is_prime(num) and user_answer.lower() == 'no'):
-            correct_answers += 1
+            score += 1
             print("Correct!")
-        else:
-            print("is wrong answer ;(")
-    if correct_answers >= 3:
-        print(f"Congratulations, {name}!")
-    else:
-        print(f"Let's try again, {name}!")
+            if score >= 3:  # Проверка, достигли ли мы трех правильных ответов
+                print(f'Congratulations, {name}!')
+                break
+        elif is_prime(num) and user_answer.lower() == 'no':
+            print(f"'{user_answer}' is wrong answer ;(. Correct answer was 'yes'.")
+            print(f"Let's try again, {name}!")
+            break
+        elif not is_prime(num) and user_answer.lower() == 'yes':
+            print(f"'{user_answer}' is wrong answer ;(. Correct answer was 'no'.")
+            print(f"Let's try again, {name}!")
+            break
 
 
 if __name__ == "__main__":
