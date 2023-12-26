@@ -11,20 +11,25 @@ def gcd(a, b):
 print("brain-gcd\n")
 name = welcome_user()
 
-
 def main():
+    score = 0  # Инициализация счетчика
     print("Find the greatest common divisor of given numbers.")
-    num1 = random.randint(1, 100)
-    num2 = random.randint(1, 100)
-    print(f"Question: {num1} {num2}")
-    user_answer = int(input('Your answer: '))
-    correct_answer = gcd(num1, num2)
-    if user_answer == correct_answer:
-        print(f"Correct!\nCongratulations, Sam!\n")
-    else:
-        print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
-        print(f"Let's try again, {name}!")
-
+    while True:
+        num1 = random.randint(1, 100)
+        num2 = random.randint(1, 100)
+        print(f"Question: {num1} {num2}")
+        user_answer = int(input('Your answer: '))
+        correct_answer = gcd(num1, num2)
+        if user_answer == correct_answer:
+            print(f'Correct!')
+            score += 1  # Увеличение счетчика
+            if score >= 3:  # Проверка, достигли ли мы трех правильных ответов
+                print(f'Congratulations, {name}!')
+                break
+        else:
+            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(f"Let's try again, {name}!")
+            break
 
 if __name__ == "__main__":
     main()
